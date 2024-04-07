@@ -5,4 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(StackStory main.cpp
         Stack.cpp
-        Stack.h)
+        Stack.h
+        DisplayMenu.cpp
+        DisplayMenu.h
+        Operations.cpp
+        Operations.h)

@@ -17,6 +17,7 @@ private:
         StackNode *next; // pointer to next node
     };
     StackNode *top; // pointer to stack top
+    int length;
 public:
     // constuctor
     Stack();
@@ -25,8 +26,12 @@ public:
 
     // stack operations
     void push(string str);
-    void pop(string &str);
+    void pop();
     bool isEmpty();
+    void display();
+    void makeStory();
+    void capitalizeAll();
+    int getLength();
 
 };
 
