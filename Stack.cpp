@@ -100,11 +100,7 @@ void Stack::makeStory() {
     cout << word << ", it stumbled upon a ";
     word = top->value;
     pop();
-    cout << word << " clearing, where the mystery finally ";
-    word = top->value;
-    pop();
-    cout << word << "." << endl;
-
+    cout << word << " clearing, where the mystery finally began.";
 }
 
 void Stack::capitalizeAll() {
