@@ -26,6 +26,7 @@ public:
 
     // stack operations
     void push(string str);
+    void pop(string& str);
     void pop();
     bool isEmpty();
     void display();

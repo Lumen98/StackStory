@@ -43,8 +43,23 @@ void Stack::push(string str) {
 }
 
 
-void Stack::pop() {
+void Stack::pop(string& str) {
     // uses a string reference parameter, value at the top of the stack is removed and copied into the reference parameter
+
+    if(isEmpty() == false) {
+        str = top->value;
+        StackNode *nodePtr = top;
+        top = nodePtr->next;
+        delete nodePtr;
+        length--;
+    }
+    else {
+        return;
+    }
+
+}
+
+void Stack::pop() {
 
     if(isEmpty() == false) {
         StackNode *nodePtr = top;
@@ -86,20 +101,16 @@ void Stack::makeStory() {
         cout << "Stack needs at least 5 words stored to make a story. " << endl;
         return;
     }
-    string word = top->value;
-    pop();
+    string word;
+    pop(word);
     cout << "In the heart of the " << word;
-    word = top->value;
-    pop();
+    pop(word);
     cout << " forest, a " << word << " was searching for the legendary ";
-    word = top->value;
-    pop();
+    pop(word);
     cout << word << ". After days of ";
-    word = top->value;
-    pop();
+    pop(word);
     cout << word << ", it stumbled upon a ";
-    word = top->value;
-    pop();
+    pop(word);
     cout << word << " clearing, where the mystery finally began.";
 }
 
