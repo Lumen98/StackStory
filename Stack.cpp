@@ -4,6 +4,7 @@
 
 #include "Stack.h"
 #include <iostream>
+#include "Operations.h"
 using namespace std;
 
 Stack::Stack() {
@@ -25,7 +26,15 @@ Stack::~Stack() {
 
 void Stack::push(string str) {
     // accepts and string argument which is pushed onto the top of the stack
-
+    Operations o1;
+    while(o1.isBlank(str)) {
+        cout << "Word cannot be blank. Try again." << endl;
+        return;
+    }
+    while(str.length() > 10) {
+        cout << "Word length cannot be greater than 10 characters. Try again." << endl;
+        return;
+    }
     if(isEmpty() == false) {
         StackNode *newNode = new StackNode;
         newNode->value = str;
@@ -39,7 +48,6 @@ void Stack::push(string str) {
         top = newNode;
     }
     length++;
-
 }
 
 

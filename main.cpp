@@ -43,7 +43,7 @@ int main() {
 //                    getline(cin >> ws, input);
 //                }
                 while(input.length() > 10) {
-                    cout << "Word length cannot be greater than 10 characters. Try again.";
+                    cout << "Word length cannot be greater than 10 characters. Try again." << endl;
                     getline(cin >> ws, input);
                 }
                 cout << endl;
@@ -55,12 +55,22 @@ int main() {
                 break;
             }
             case 2: {
-                s1.pop();
+                if(!s1.isEmpty()) {
+                    s1.pop();
+                }
+                else {
+                    cout << "Stack is empty. " << endl;
+                }
                 break;
             }
 
             case 3: {
-                s1.capitalizeAll();
+                if(!s1.isEmpty()) {
+                    s1.capitalizeAll();
+                }
+                else {
+                    cout << "Stack is empty. " << endl;
+                }
                 break;
             }
             case 4: {
@@ -68,7 +78,12 @@ int main() {
                 break;
             }
             case 5: {
-                s1.makeStory();
+                if(s1.getLength() >= 5) {
+                    s1.makeStory();
+                }
+                else {
+                    cout << "Stack needs at least 5 words stored to make a story. " << endl;
+                }
                 break;
             }
             case 6: {
