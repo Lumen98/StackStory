@@ -158,16 +158,21 @@ void Stack::capitalizeAll() {
 
     // iterate thru stack
     while(nodePtr != nullptr) {
+        // grab value from stack
         string str = nodePtr->value;
         for(int i = 0; i < str.length(); i++) {
+            // loop through string and set each char to uppercase
             str[i] = toupper(str[i]);
+            // reset value to uppercase str
             nodePtr->value = str;
         }
+        // iterate ptr
         nodePtr = nodePtr->next;
     }
 
 }
 
+// getter
 int Stack::getLength() {
     return length;
 }

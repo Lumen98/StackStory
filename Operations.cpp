@@ -19,12 +19,13 @@ using namespace std;
 //    return true;
 //}
 
+// check for input blanks
 bool Operations::isBlank(string str) {
     if(str == "") {
         return true;
     }
     bool blank = false;
-
+// if first char is a space then its blank
         if(str[0] == ' ') {
             blank = true;
         }
