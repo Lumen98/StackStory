@@ -29,11 +29,11 @@ int main() {
         string input;
         switch (menuChoice) {
             case 1: {
-                //ws --> clears leading white space chars
+                // ws --> clears leading white space chars
                 cout << "Please enter the word you want to push: " << endl;
-                getline(cin >> ws, input); //use getline here because words can have spaces
+                getline(cin >> ws, input); // use getline here because words can have spaces
 
-                //high level validation
+                // high level validation
                 while(o1.isBlank(input)) {
                     cout << "Word cannot be blank. Try again." << endl;
                     getline(cin >> ws, input);
@@ -42,6 +42,7 @@ int main() {
 //                    cout << "Word cannot have numbers. Try again." << endl;
 //                    getline(cin >> ws, input);
 //                }
+                // high level validation again, separated input fail statements for user
                 while(input.length() > 10) {
                     cout << "Word length cannot be greater than 10 characters. Try again." << endl;
                     getline(cin >> ws, input);
@@ -55,7 +56,9 @@ int main() {
                 break;
             }
             case 2: {
+                // check if stack is empty
                 if(!s1.isEmpty()) {
+                    // if not, pop
                     s1.pop();
                 }
                 else {
