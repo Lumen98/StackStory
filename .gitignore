@@ -1,4 +1,4 @@
 # Project exclude paths
 /cmake-build-debug/
-/Users/lumennabulsi/CLionProjects/StackStory/CMakeLists.txt/
+CMakeLists.txt/
 .idea/
