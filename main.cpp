@@ -11,9 +11,10 @@ using namespace std;
 
 int main() {
     int menuChoice; // make a menuchoice var
-    DisplayMenu m1; // create new objects
+    DisplayMenu m1; // create new objects for organization
     Stack s1;
     Operations o1;
+
 
     do {
         m1.displayMenuFirstMsg();
